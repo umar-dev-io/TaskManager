@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken, removeToken } from "../utils/tokenStorage";
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "https://taskmanager-backend-ten-psi.vercel.app/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 axiosInstance.interceptors.request.use((config) => {

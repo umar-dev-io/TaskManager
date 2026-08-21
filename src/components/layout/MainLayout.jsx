@@ -1,17 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import TaskFormModal from "../tasks/TaskFormModal"; // adjust path as needed
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col justify-between bg-gray-950 text-white relative">
       <div>
         <Navbar />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="w-full">
           <Outlet />
         </main>
       </div>
       <Footer />
+      
+      {/* Global modal placement so it centers across the full screen */}
+      <TaskFormModal />
     </div>
   );
 };
